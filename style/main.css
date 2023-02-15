@@ -1,0 +1,113 @@
+*{
+    font-size: 16px;
+    box-sizing: border-box;
+    margin: 0;
+    scroll-behavior: smooth;
+
+
+}
+
+.navigation-bar{
+    background-color: gray;
+    display: flex;
+    height: 3rem;
+    width: 100%;
+    justify-content: flex-end;
+    position: fixed;
+    z-index: 10;
+    
+}
+
+.navigation-bar .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    width: 3rem;
+    border: 1px solid red;
+    font-size: 3rem;
+    margin-right: auto;
+    
+    
+}
+
+.navigation-bar ul {
+    list-style: none;
+    margin: auto 1rem
+    
+    
+
+}
+.navigation-bar li {
+    display: inline;
+    margin-left: 0.2rem;
+    border: 1px solid red;
+    padding: 0.3rem;
+    
+    
+
+}
+.navigation-bar a {
+    color: aliceblue;
+    text-decoration: none;
+
+
+}
+
+.navigation-bar button {
+    color: blue;
+    text-decoration: none;
+    margin-right: 0.7rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 1.5rem;
+
+
+}
+main{
+display: flex;
+flex-wrap: wrap;
+width: 100%;
+padding: 5rem 2rem 2rem 2rem
+
+}
+.banner{
+    display: flex;
+    background-color: beige;
+    width: 100%;
+    height: 25rem;
+}
+.banner button{
+    margin: auto;
+}
+.banner button{
+    margin: auto;
+}
+.banner button{
+    margin: auto;
+}
+
+
+.abount-me{
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px red solid;
+}
+.abount-meInfo{
+    display: flex;
+}
+.abount-text{
+    width: 50%;
+    border: 2px red solid;
+}
+.abount-me h2{
+    width: 100%;
+    
+}
+.img-picture{
+    margin: auto;
+}
+.img-picture img{
+    width: 15rem;
+    height: 15rem;
+}
