@@ -23,65 +23,69 @@
        </nav>
     </header>
     <main>
-        <div class="banner">
-            <p id="first-words">Hi!, my name is</p>
-            <h1>Jose Fernando Casadiego Mora </h1>
-            <span>I´m a full stack developer </span>
-            <p>soy un desarrollador fullstack en proceso de formacion.</p>
-            <button>View work</button>
+        <div class="container">
+            <div class="banner">
+                <p id="first-words">Hi, my name is</p>
+                <h1>Jose Fernando Casadiego Mora </h1>
+                <span>I´m a full stack developer </span>
+                <p id="resumen"> Welcome to my portfolio! <br>I am a programmer in training 
+                     and I am pleased to share with you <br>my skills and projects in this field.</p>
+                <button>View work</button>
+             </div>
         </div>
-
-
-        <div class="abount-me">
-            
-            <h2>Abount Me</h2>
-            <div class="abount-meInfo">
-                <div class="abount-text">
-                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quidem iste eligendi facilis quod, doloremque similique exercitationem neque consequuntur unde voluptas nostrum quos, rem eveniet fugiat repellat saepe, molestiae vitae!
-                    Id deserunt quae delectus laudantium assumenda aut dolorum nemo libero quas eos reprehenderit, debitis similique omnis nisi aperiam unde consequatur dolore asperiores harum tempora provident laboriosam illum. Repudiandae, nemo delectus.
-                    Quos consequatur labore aspernatur placeat fuga blanditiis similique autem nesciunt cumque adipisci? Dolorum enim in doloremque iusto, porro blanditiis quis tenetur corporis mollitia possimus esse, assumenda animi ullam laudantium odio!
-                    Laboriosam ipsam voluptatibus minima magni ex animi voluptatem, est, saepe fuga corrupti pariatur incidunt maiores distinctio magnam accusantium ea sapiente dolor rem quibusdam cumque necessitatibus? Modi voluptates excepturi sunt molestias?
-                    Cupiditate ducimus quidem cum, error fugit quod cumque sed, debitis nihil sint neque itaque doloremque, quis mollitia animi totam dolorem id! Numquam laboriosam ipsam debitis, voluptate voluptas magnam id libero.
-                    Voluptatem sequi nisi id incidunt, officiis placeat. Harum, rem dolore. Deleniti quaerat voluptas consequatur maxime exercitationem enim labore itaque repellat, voluptates in ut facilis, quod repellendus incidunt nesciunt recusandae quam.
-                    Dicta assumenda laborum necessitatibus cum aliquam explicabo tempore accusamus hic, expedita dolor at ea perspiciatis eius porro, consequuntur modi dolores id error in. Ut dolorem aut molestias illum eius hic.
-                    Doloremque, impedit. Dicta eligendi eius quo aliquam doloremque adipisci natus incidunt dignissimos, similique accusantium iure deserunt voluptas sequi voluptates, magnam provident facilis, laborum nesciunt tempora qui nisi facere optio. Adipisci.
-                    Vel iusto quaerat maiores fugit esse porro veritatis voluptatem alias distinctio odio quos rem culpa, sit harum repellendus expedita. Asperiores, alias. Enim, nobis sequi. Quidem numquam iste eum quo corrupti.
-                    Similique incidunt alias facere. Corporis, eveniet omnis vero asperiores porro ea temporibus? Placeat sequi eius assumenda unde? Sunt, quos? Officia illum labore voluptate dolor error est suscipit, et ipsa voluptates.</p>
-                </div>    
-            <div class="img-picture">
-                <img src="img/FotoPersonal.jpg" alt="Foto Personal de la hoja de vida">
+        <div class="container aboutMe-workSpace">
+            <div class="abount-me">
+                <h2>Abount Me</h2>
+                <div class="abount-meInfo">
+                    <div class="abount-text">
+                        <p> Hello, my name is Jose Fernando Casadiego, a programming student with a great passion for the world of web development </p>
+                        <br>
+                        <p>One of my most valuable skills is my ability to learn autonomously. 
+                            I love to explore new technologies and programming languages on my own, 
+                            which enables me to acquire knowledge quickly and effectively. 
+                            Additionally, my ability to work in a team allows 
+                            me to collaborate on ambitious projects and develop valuable 
+                            skills for group programming."</p>
+                    </div>    
+                    <div class="img-picture">
+                        <img src="img/FotoPersonal.jpg" alt="Foto Personal de la hoja de vida">
+                    </div>
+                </div>
             </div>
         </div>
+
+        <div class="container skills-workPlace">
+            <div class="skills">
+                <div class="skills card-html">HTML</div>
+                <div class="skills card-css">CSS</div>
+                <div class="skills card-javaScript">JAVASCRIPT</div>
+                <div class="skills card-github">GITHUB</div>
+                <div class="skills card-nodejs">NODE.JS</div>
+            </div>
+        </div>
+        <div class="container projects-workPlace">
+            <div class="works">
+                    <p>Projects</p>
+                    <p>Recent Work</p>
+                    <div class="projects-active">
+                        <div class="card-project TBC EPI-TRACKER">TBC EPI-TRACKER</div>
+                        <div class="card-project">comin soon</div>
+                        <div class="card-project">comin soon</div>  
+                    </div>               
+            </div> 
         </div>
 
-        
-        <div class="skills">
-            <div class="skills card-html">HTML</div>
-            <div class="skills card-css">CSS</div>
-            <div class="skills card-javaScript">JAVASCRIPT</div>
-            <div class="skills card-github">GITHUB</div>
-            <div class="skills card-nodejs">NODE.JS</div>
-        </div>
-
-        <div class="works">
-                <p>Projects</p>
-                <p>Recent Work</p>
-                <div class="projects-active">
-                    <div class="card-project TBC EPI-TRACKER">TBC EPI-TRACKER</div>
-                    <div class="card-project">comin soon</div>
-                    <div class="card-project">comin soon</div>  
-                </div>               
-        </div> 
-
-       <div class="Contact">
+    <div class="container contact-workPlace">
+       <div class="contact">
         <form action="">
             <input type="text" name="nombre" id="nombre" value="Nombre">
-            <input type="email" name="email" d="email" value="Email">
+            <br>            <input type="email" name="email" d="email" value="Email">
+            <br>
             <textarea name="Message" id="Message" cols="30" rows="10" > Message</textarea>
         </form> 
-
        </div>     
-       
+    </div>
+
     </main>
     <script src="scripts/scripts.js"></script>
 </body> 
