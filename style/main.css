@@ -4,7 +4,6 @@
     box-sizing: border-box;
     margin: 0;
     scroll-behavior: smooth;
-
 }
 
 main{
@@ -13,8 +12,7 @@ main{
     width: 100%;
     padding-top: 3rem;
     padding-left: auto ;
-    font-family: 'Signika Negative', sans-serif;
-    
+    font-family: 'Signika Negative', sans-serif;    
     }
 
 
@@ -28,7 +26,6 @@ main{
     position: fixed;
     z-index: 10;
     overflow: hidden;
-    
 }
 
 .navigation-bar .logo{
@@ -37,26 +34,21 @@ main{
     align-items: center;
     height: 3rem;
     width: 5rem;
-    margin-right: auto; 
-    
+    margin-right: auto;     
 }
 
 .navigation-bar .logo p{
     text-align: center;
     font-size: 2.5rem;
     color: white;
-  
 }
-
 
 .navigation-bar ul {
     list-style: none;
     margin: auto 5rem;
     padding-left: 3rem;
-   
-    
-
 }
+
 .navigation-bar li {
     display: inline;
     margin-left: 0.2rem;
@@ -88,16 +80,13 @@ main{
     color:  rgba(128, 128, 128, 0.726);
     text-decoration: none;
     font-family: 'Signika Negative', sans-serif;
-    font-weight:bolder;
-    
+    font-weight:bolder;    
 }
 
 .navigation-bar a:hover::after{
     width: 100%;
     right: 0;
 }
-
-
 
 .navigation-bar button {
     color: white;
@@ -112,8 +101,7 @@ main{
     margin-right: 3rem;
     cursor: pointer;
     position: relative;
-    z-index: 0;
-    
+    z-index: 0;    
 }
 
 .navigation-bar button::before {
@@ -126,25 +114,20 @@ main{
     position: absolute;
     transition: all 0.4s ;
     z-index: -1;
-    will-change: width;
-    
-
+    will-change: width;   
 }
+
 .navigation-bar button:hover::before {
     content: "";
     width: 100%;
-    right: 0;
-    
-
+    right: 0; 
 }
 
-
-
-/* ----------------estilado para el banner inicial -------------*/
+/* ----------------estilado para el banner inicial -------------------------*/
 .container{
     display: flex;
     flex-wrap: wrap;
-    height: 700px;
+    height: auto;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -166,19 +149,18 @@ main{
     margin-top:auto;
     margin-bottom: auto;
     color: white;
-    
-    
-    }
+ }
+
 .banner p{
-    font-size: 1.5rem;
+    font-size: 2rem;
     height: auto;
 }
 .banner h1{
-    font-size: 3rem;
+    font-size: 4.5rem;
     font-weight: bold;
 }
 .banner span{
-    font-size: 3rem;
+    font-size: 3.5rem;
 }
 
 .banner #resumen{
@@ -190,30 +172,56 @@ main{
 }
 
 .banner button{
-    margin: auto auto auto 1px
+    color: white;
+    border: 1px solid #5b1296;
+    background-color: #393053;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 0.7rem;
+    margin-top: 1rem;
+    margin-bottom: auto;
+    height: 2rem;
+    margin-right: 3rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;       
 }
 
+.banner button::after{
+   content: "";
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;    
+    position: absolute;
+    transition: all 0.4s ;
+    z-index: -1;
+    border-radius: 5px;      
+}
 
+.banner button:hover::after{
+   content: "";
+    width: 100%;
+    right: 0;
+    background-color: #8561a3be;
+}
 /*--------------------Styling the personal information zone (Abount Me are)------------------*/
 
 
 .aboutMe-workSpace{
 height: auto;
+background-color: #362f58;
 }
-
-
 
 .abount-me{
     display: flex;
     flex-wrap: wrap;
     width: 70%;
-    height: 500px;
-    border: 2px  solid red;
-               
-
+    height: auto;        
 }
 
 .abount-me h2  {
+    margin-top: 5%;
     width: 100%;
     font-size: 2.5rem;
     color: white;
@@ -224,52 +232,205 @@ height: auto;
 .abount-meInfo{
     width: 100%;
     display: flex;
-    flex-wrap: nowrap;
-    height: min-content;
-    border: 2px solid blue;
+    flex-wrap: wrap;
+    height: min-content;    
+    padding: 3rem;
      
 }
 .abount-text {
     margin-top: 2rem;
     margin-left: 3rem;
-    border: 2px solid red;
     background-color: #362f58;
     height: min-content;
-}
-.abount-text p {
- 
-    color: white;
-   
-}
-
-
-.abount-text{
     width: 50%;
     padding: 1.5rem;   
 }
-
-.abount-me h2{
-    width: 100%;
+.abount-text p {
+    color: white;   
 }
 
 .img-picture{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex;    
     width: auto;
     height: auto;
     margin: auto;
-    margin-bottom: 43%;
-    margin-left: 5%;
+    margin-left: 5%;   
     
 }
 
 .img-picture img{    
-    width: 300px;
+    width: 280px;
+    height: 300px;  
+    z-index: 5;  
+    position: relative;
+    border-radius: 5px;
+}
+
+.img-picture::after{    
+    content: "";  
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
     height: 300px;
+    width: 280px;        
+    border:5px solid #503f8a; 
+    background-color: #503f8a;
+    border-radius: 10px;
+    position: absolute; 
+    transition: all 0.3s;     
+  }
+
+  .img-picture:hover::after{    
+    margin-left: 0.1rem;
+    margin-top: 0.2rem;
+    background-color: #6b4b96;
+    border:5px solid #6b4b96;
+  }
+  .img-picture::before{    
+    content: ""; 
+    position: absolute; 
+    width: 280px;
+    height: 300px;
+    z-index: 6;     
+  }
+
+  .img-picture:hover::before{    
+   z-index: 4;     
+  }
+
+    .container-estudios{
+    width: 100%;
+  }
+
+.container-studies{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;    
+    padding: 3rem;    
+}
+
+.studies-picture{
+   margin: auto;
+}
+
+.studies-picture img{ 
+    width: 400px;
+    height: 240px;   
+    border-radius: 10px; 
+}
+
+.abount-studies{
+    margin: auto;    
+    width: 50%;
+    background-color: #362f58;
+    height: min-content;
+    color: white;    
+}
+
+.abount-studies h3{
+    color: white;
+    font-size: 2.5rem;
+}
+
+/*-----------------------------------styling of skills----------------*/
+.skills-workPlace{
+background-color: #443C68;
+
+width: 100%;
+height: 700px;
+
+}
+.skills-workPlace-tittle{    
+    width: 50%;
+}
+
+#tittle-skills{
+    width: 100%;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+
+}
+
+
+.skills-grid{
+    display: grid;   
+    width: auto;
+    height: min-content;    
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1rem;
+    
+    
+    
     
 }
 
+.card{    
+    color:black;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: 140px;
+    background-color: white;
+    
+    border-radius: 20px;
+}
+
+.card img{
+    margin-top: 1rem;
+    width: 80px;
+    height: 80px;
+}
+
+.card p{
+    text-align: center;
+    width: 100%;
+}
+/*-------------------------------- styling projects----------------------------*/
+
+.projects-workPlace{
+    
+    background-color: #443C68;
+    border: 5px solid rgb(221, 25, 11);
+    width: 100%;
+    height: 600px;
+}
+
+.works{
+    display: flex;
+    flex-wrap: wrap;
+    border: 5px solid rgb(240, 134, 231);
+    width: 70%;
+    height: 70%;
+    
+}
+.works p{
+    border: 5px solid rgb(240, 10, 29);
+    width: 100%;
+}
+
+.projects-active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto%;
+    border: 5px solid rgb(5, 235, 63);
+}
+
+.card-project{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid purple;
+    height: 180px;
+    width: 250px;
+    margin:2rem;
+}
+
+
+
+/*------------------------------contact area------------------------------------------*/
 .contact{
     display: flex;
     flex-wrap: wrap;
@@ -277,6 +438,5 @@ height: auto;
 }
 .contact form{
    text-align: center;
-
     
 }
