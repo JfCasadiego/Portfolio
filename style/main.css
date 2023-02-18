@@ -392,42 +392,76 @@ height: 700px;
 
 .projects-workPlace{
     
-    background-color: #443C68;
-    border: 5px solid rgb(221, 25, 11);
+    background-color: #362f58;
+    /*border: 5px solid rgb(221, 25, 11);*/
     width: 100%;
-    height: 600px;
+    height: min-content;
+    padding: 5% 0;    
+
 }
 
 .works{
     display: flex;
     flex-wrap: wrap;
-    border: 5px solid rgb(240, 134, 231);
+    /*border: 5px solid rgb(240, 134, 231);*/
     width: 70%;
     height: 70%;
+    flex-direction:initial;
     
 }
-.works p{
-    border: 5px solid rgb(240, 10, 29);
+
+.works #works-tittle{
+   /* border: 5px solid rgb(240, 10, 29);*/
     width: 100%;
+    font-size: 3rem;
+    color: white;
+    font-weight: bolder;
+    margin: auto;
+    padding: auto;
+    text-transform: uppercase;
+}
+ 
+.works #works-subtitle{
+    /*border: 5px solid rgb(240, 10, 29);*/
+    width: 100%;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bolder;
 }
 
 .projects-active{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: auto%;
-    border: 5px solid rgb(5, 235, 63);
+    height: auto;
+    /*border: 5px solid rgb(5, 235, 63);*/
 }
 
 .card-project{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: rgb(255, 255, 255);
-    border: 1px solid purple;
-    height: 180px;
-    width: 250px;
-    margin:2rem;
+    /*border: 1px solid purple;*/
+    height: 20rem;
+    width: 18rem;
+    margin:2rem;    
+    transition: all 0.3s ease;
 }
 
+.card-project:hover{
+   
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.747);
+    transform: translateY(-4%)
+    
+}
+
+.card-project p{
+    text-align: center;
+    font-size: 1rem;
+}
 
 
 /*------------------------------contact area------------------------------------------*/
