@@ -4,6 +4,8 @@
     box-sizing: border-box;
     margin: 0;
     scroll-behavior: smooth;
+    
+
 }
 
 main{
@@ -12,10 +14,14 @@ main{
     width: 100%;
     padding-top: 3rem;
     padding-left: auto ;
-    font-family: 'Signika Negative', sans-serif;    
+    font-family: 'Signika Negative', sans-serif;  
+    background-color: #443C68;  
     }
 
-
+a{
+    text-decoration: none;
+    color: white;
+}
 /*-----------------------estilado para la Navbar ----------------------------------*/
 .navigation-bar{
     background-color: #393053;
@@ -24,8 +30,10 @@ main{
     width: 100%;
     justify-content: flex-end;
     position: fixed;
-    z-index: 10;
+    z-index: 100;
     overflow: hidden;
+    transition: height 0.5s;
+    
 }
 
 .navigation-bar .logo{
@@ -88,6 +96,9 @@ main{
     right: 0;
 }
 
+
+
+      
 .navigation-bar button {
     color: white;
     border: 3px solid #5b1296;
@@ -171,7 +182,7 @@ main{
     width: 100%;
 }
 
-.banner button{
+.button{
     color: white;
     border: 1px solid #5b1296;
     background-color: #393053;
@@ -187,7 +198,7 @@ main{
     z-index: 0;       
 }
 
-.banner button::after{
+.button::after{
    content: "";
     height: 100%;
     width: 100%;
@@ -199,7 +210,7 @@ main{
     border-radius: 5px;      
 }
 
-.banner button:hover::after{
+.button:hover::after{
    content: "";
     width: 100%;
     right: 0;
@@ -277,29 +288,30 @@ background-color: #362f58;
     border-radius: 10px;
     position: absolute; 
     transition: all 0.3s;     
-  }
+}
 
-  .img-picture:hover::after{    
+.img-picture:hover::after{    
     margin-left: 0.1rem;
     margin-top: 0.2rem;
     background-color: #6b4b96;
     border:5px solid #6b4b96;
-  }
-  .img-picture::before{    
+}
+
+.img-picture::before{    
     content: ""; 
     position: absolute; 
     width: 280px;
     height: 300px;
     z-index: 6;     
-  }
+}
 
-  .img-picture:hover::before{    
+.img-picture:hover::before{    
    z-index: 4;     
-  }
+}
 
-    .container-estudios{
+.container-estudios{
     width: 100%;
-  }
+}
 
 .container-studies{
     display: flex;
@@ -334,11 +346,10 @@ background-color: #362f58;
 /*-----------------------------------styling of skills----------------*/
 .skills-workPlace{
 background-color: #443C68;
-
 width: 100%;
 height: 700px;
-
 }
+
 .skills-workPlace-tittle{    
     width: 50%;
 }
@@ -348,9 +359,7 @@ height: 700px;
     color: white;
     font-size: 3rem;
     font-weight: bold;
-
 }
-
 
 .skills-grid{
     display: grid;   
@@ -359,9 +368,8 @@ height: 700px;
     grid-template-columns: auto auto auto;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 1rem;
-    
-    
-    
+        
+      
     
 }
 
@@ -374,8 +382,33 @@ height: 700px;
     width: 220px;
     height: 140px;
     background-color: white;
+    border-radius: 20px;    
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    transition: color 0.5s ease;
     
-    border-radius: 20px;
+
+}
+
+.card::after{
+    content: "";      
+    position: absolute;
+    top: var(--y);
+    left: var(--x);   
+    transform: translate(-50%, -50%);
+    height: 0;
+    width: 0;
+    border-radius: 50%;    
+    background-color: blue;
+    transition: width 1s, height 1s;
+    z-index: -1;
+
+}.card:hover::after{ 
+    width: 500px;
+    height: 500px;
+    
+    
 }
 
 .card img{
@@ -393,7 +426,6 @@ height: 700px;
 .projects-workPlace{
     
     background-color: #362f58;
-    /*border: 5px solid rgb(221, 25, 11);*/
     width: 100%;
     height: min-content;
     padding: 5% 0;    
@@ -403,7 +435,6 @@ height: 700px;
 .works{
     display: flex;
     flex-wrap: wrap;
-    /*border: 5px solid rgb(240, 134, 231);*/
     width: 70%;
     height: 70%;
     flex-direction:initial;
@@ -411,7 +442,6 @@ height: 700px;
 }
 
 .works #works-tittle{
-   /* border: 5px solid rgb(240, 10, 29);*/
     width: 100%;
     font-size: 3rem;
     color: white;
@@ -422,7 +452,6 @@ height: 700px;
 }
  
 .works #works-subtitle{
-    /*border: 5px solid rgb(240, 10, 29);*/
     width: 100%;
     font-size: 1.5rem;
     color: white;
@@ -436,41 +465,131 @@ height: 700px;
     align-items: center;
     width: 100%;
     height: auto;
-    /*border: 5px solid rgb(5, 235, 63);*/
 }
+
 
 .card-project{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    border-radius: 25px;
     background-color: rgb(255, 255, 255);
-    /*border: 1px solid purple;*/
     height: 20rem;
     width: 18rem;
     margin:2rem;    
     transition: all 0.3s ease;
 }
 
-.card-project:hover{
-   
+.card-project:hover{   
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.747);
     transform: translateY(-4%)
     
 }
-
 .card-project p{
+    margin-top: 5%;
+    width: 70%;
+    height: 15%;
+    background-color: #000000;
+    color: white;
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    
+    
+}
+
+.TBC-EPI-TRACKER{
+    background-color: #313235;
+    background-image: url(/img/TBC-tracker.png);
+    background-repeat: no-repeat;
+    background-size:95%;
+    background-position: center;    
+    position: relative;
+}
+
+.TBC-EPI-TRACKER::before{
+    content: "";
+    visibility:hidden;
+    position: absolute;
+    border-radius: 20px;    
+    width: 100%;
+    height: 100%;
+    background-color: #000000e1;
+}
+.TBC-EPI-TRACKER:hover::before{
+    box-sizing: border-box;
+    padding-top: 50%;
+    text-align: center;
+
+    content: "TBC tracker plataforma para el reporte y seguimiento de la tuberculosis.";
+    color: white;
+    visibility:visible;
+    
 }
 
 
 /*------------------------------contact area------------------------------------------*/
+.contact-workPlace{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5% 0;
+    height: 635px;
+}
+
 .contact{
     display: flex;
     flex-wrap: wrap;
-    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 70%;
+    color: white;
 }
-.contact form{
-   text-align: center;
-    
+
+#contact-1line{
+    text-align: center;    
+    height: min-content;
+    font-size:1.5rem;
+    font-weight: bold;
 }
+
+#Contact-tittle{
+    text-align: center;    
+    height: min-content;
+    font-size: 3rem;    
+    font-weight: bolder;
+    margin: 1rem 0;    
+}
+
+#contact-3line{
+    text-align: center;
+    width: 50%;
+    height: min-content;
+}
+
+.contact .button{
+    margin: 1rem 0;
+    border: 4px solid #5b1296;
+    border-radius: 15px;
+    height: 4rem;
+    width: 8rem;
+}
+
+#linkEmail{
+    color: white;
+    text-decoration: none;    
+}
+
+footer{    
+    color: white;
+    text-align: center;
+    background-color:#443C68;
+    height: 35px;
+    font-family: 'Signika Negative', sans-serif;  
+    font-weight: bold; 
+}   
+
+

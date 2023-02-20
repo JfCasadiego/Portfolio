@@ -13,28 +13,28 @@
         <nav class="navigation-bar">
             <div class="logo"><p>C</p></div>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Abount Me</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#abountme">Abount Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-            <button>Resumen</button>
+            <button href="https://www.youtube.com/">Resumen</button>
        </nav>
     </header>
     <main>
         <div class="container">
-            <div class="banner">
+            <div class="banner" id="home">
                 <p id="first-words">Hi, my name is</p>
                 <h1>Jose Fernando Casadiego Mora </h1>
                 <span>I´m a full stack developer </span>
                 <p id="resumen"> Welcome to my portfolio! <br>I am a programmer in training 
                      and I am pleased to share with you <br>my skills and projects in this field.</p>
-                <button >View work</button>
+                <button class="button"><a class="casa" href="#">View work</a></button>
              </div>
         </div>
         <div class="container aboutMe-workSpace">
-            <div class="abount-me">
+            <div class="abount-me" id="abountme">
                 <h2>Abount Me</h2>
                 <div class="abount-meInfo">
 
@@ -69,9 +69,9 @@
             </div>
         </div>
 
-        <div class="container skills-workPlace">
+        <div class="container skills-workPlace" id="skills">
 
-            <div class="skills-workPlace-tittle">                    
+            <div class="skills-workPlace-tittle" >                    
                 <p id="tittle-skills">SKILLS</p>
                 <div class="skills-grid">
                     <div class="card C-html">
@@ -114,37 +114,39 @@
             </div>
         </div>
 
-
-        <div class="container projects-workPlace">
+        
+        <div class="container projects-workPlace"id="projects">
             <div class="works">
                     <p id="works-tittle">Projects</p>
                     <p id="works-subtitle">Check my Recent Work</p>
                     <div class="projects-active">
-                        <div class="card-project TBC EPI-TRACKER">
-                            <p>TBC EPI-TRACKER</p> 
+                        <div class="card-project TBC-EPI-TRACKER">                                                         
                         </div>
                         <div class="card-project">
-                            <p>comin soon</p> 
+                            <p>COMING SOON</p> 
                         </div>
                         <div class="card-project">
-                            <p>comin soon</p> 
+                            <p>COMING SOON</p> 
                         </div>  
                     </div>               
             </div> 
         </div>
 
-    <div class="container contact-workPlace">
+    <div class="container contact-workPlace" id="contact">
        <div class="contact">
-        <form action="">
-            <input type="text" name="nombre" id="nombre" value="Nombre">
-            <br>            <input type="email" name="email" d="email" value="Email">
-            <br>
-            <textarea name="Message" id="Message" cols="30" rows="10" > Message</textarea>
-        </form> 
+        <p id="contact-1line">More info?</p>
+        <h3 id="Contact-tittle">Get In Touch</h3>
+        <p id="contact-3line">Currently, I am studying full-stack development. If I can be of any help, 
+            please do not hesitate to reach out.My main goal is to learn much more in a work environment.</p>
+        <button class="button"><a id="linkEmail" href="mailto:jose.fernando.casadiego@gmail.com?subject=Vi%20tu%20portafolio%20y%20quisiera%20conectar">Email Me!</a> </button>
        </div>     
     </div>
-
+        
     </main>
+    <footer>
+        <p>Designed & Built by Jose Casadiego</p>
+    </footer>
     <script src="scripts/scripts.js"></script>
+
 </body> 
 </html>
