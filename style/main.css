@@ -15,7 +15,7 @@ main{
     padding-top: 3rem;
     padding-left: auto ;
     font-family: 'Signika Negative', sans-serif;  
-    background-color: #443C68;  
+    background-color: #443C68;      
     }
 
 a{
@@ -32,7 +32,7 @@ a{
     position: fixed;
     z-index: 100;
     overflow: hidden;
-    transition: height 0.5s;
+    transition: top 0.5s;
     
 }
 
@@ -141,16 +141,20 @@ a{
     height: auto;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 100%;    
     background-color: #443C68;
+    
+    
 }
-.banner{
+.banner{    
     display:flex;
+    position: relative;    
     align-content:center;
     flex-wrap:wrap;
     background-color: #443C68;
-    width: 70%;
+    width: 50%;
     height:700px; 
+    
    
 }
 
@@ -171,13 +175,50 @@ a{
     font-weight: bold;
 }
 .banner span{
-    font-size: 3.5rem;
+    overflow: hidden;
+    font-size: 3.5rem;    
 }
+.writing-first-word{
+    
+    font-size: 3.5rem;
+    width: 9rem;
+}
+.writing-second-words{    
+    font-size: 3.5rem;
+    width: max-content;
+    position: relative;
+    font-weight: bolder;
+    color: #d37304;  
+    
+    
+    
+}
+.writing-second-words::before{
+    content: "";      
+    background: #443C68; /*#443C68;*/
+    position: absolute;
+    border-left: 5px solid #ebb609;
+    height: 100%;
+    width: 100%; 
+    top: 0;
+    left: 0; 
+    animation: animate 4s steps(22) infinite;
+}
+
+@keyframes animate{
+    40%, 60%{
+        left:100%;
+    }
+    100%{
+        left:0%
+    }
+}
+
 
 .banner #resumen{
     display: flex;
     height:min-content;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     margin-top: auto;
     width: 100%;
 }
@@ -227,7 +268,7 @@ background-color: #362f58;
 .abount-me{
     display: flex;
     flex-wrap: wrap;
-    width: 70%;
+    width: 50%;
     height: auto;        
 }
 
@@ -309,10 +350,6 @@ background-color: #362f58;
    z-index: 4;     
 }
 
-.container-estudios{
-    width: 100%;
-}
-
 .container-studies{
     display: flex;
     flex-wrap: wrap;
@@ -351,7 +388,11 @@ height: 700px;
 }
 
 .skills-workPlace-tittle{    
+    display: flex;
+    flex-wrap: wrap;
     width: 50%;
+    align-items: center;
+    justify-content: center;
 }
 
 #tittle-skills{
@@ -362,13 +403,14 @@ height: 700px;
 }
 
 .skills-grid{
-    display: grid;   
-    width: auto;
-    height: min-content;    
+    display: grid;
+    flex-wrap: wrap;
+    width: auto;       
     grid-template-columns: auto auto auto;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 1rem;
-        
+    
+    
       
     
 }
@@ -386,9 +428,15 @@ height: 700px;
     position: relative;
     z-index: 10;
     overflow: hidden;
-    transition: color 0.5s ease;
+    transition: all 0.5s ease;
+
     
 
+}
+
+.card:hover{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3),
+    -5px -5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .card::after{
@@ -400,13 +448,14 @@ height: 700px;
     height: 0;
     width: 0;
     border-radius: 50%;    
-    background-color: blue;
-    transition: width 1s, height 1s;
+    background-color: rgb(251, 153, 16);
+    transition: width 1s, height 1s;    
     z-index: -1;
 
 }.card:hover::after{ 
     width: 500px;
     height: 500px;
+    
     
     
 }
@@ -435,7 +484,7 @@ height: 700px;
 .works{
     display: flex;
     flex-wrap: wrap;
-    width: 70%;
+    width: 50%;
     height: 70%;
     flex-direction:initial;
     
@@ -521,13 +570,14 @@ height: 700px;
     box-sizing: border-box;
     padding-top: 50%;
     text-align: center;
-
     content: "TBC tracker plataforma para el reporte y seguimiento de la tuberculosis.";
     color: white;
     visibility:visible;
     
 }
 
+
+    
 
 /*------------------------------contact area------------------------------------------*/
 .contact-workPlace{
@@ -592,4 +642,103 @@ footer{
     font-weight: bold; 
 }   
 
+/*------------------------------------------------ajustes de pagina responsive--------------------------------------------------------------------*/
+@media screen and  (max-width: 1950px){
+    .works{
+        width: 70%;
+    }
+    .banner{    
+        width: 70%; 
+    
+    }
+    .abount-me{
+        width: 70%;  
+    } 
+    .abount-meInfo {
+        width: 100%;  
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    }
+    .abount-text{
+        width: 50%;
+    }
+    .card-project{
+        height: 15rem;
+        width: 13rem;
 
+    }
+    .card-project p{
+        margin-top: 5%;
+        width: 60%;
+        height: 10%;        
+        font-size: 1rem;   
+    }
+
+}
+
+@media screen and  (max-width: 1396px) {
+    .banner h1{
+        font-size: 3.5rem;
+    }
+    .works{
+        width: 78%;        
+        margin-left: 10%;
+    }
+
+    .card-project{
+        height: 14rem;
+        width: 12rem;
+
+    }
+    .card-project p{
+        margin-top: 5%;
+        width: 60%;
+        height: 10%;        
+        font-size: 1rem;   
+    }
+    
+    .container-studies{
+         padding: 1.5rem;    
+    }
+    .studies-picture img{
+        width: 300px;
+        height: 160px;
+    }
+}
+
+@media screen and  (max-width: 1024px){
+    .banner h1{
+        font-size: 2.5rem;
+    }
+    .works{
+        width: 78%;        
+        margin-left: 10%;
+    }
+
+    .card-project{
+        height: 14rem;
+        width: 12rem;
+
+    }
+    .card-project p{
+        margin-top: 5%;
+        width: 60%;
+        height: 10%;        
+        font-size: 1rem;   
+    }
+    
+    .container-studies{
+         padding: 1.5rem;    
+    }
+    .studies-picture img{
+        width: 300px;
+        height: 160px;
+    }
+
+    .img-picture{
+        margin-top: 5%;
+        width: 200px;
+        height: 120px;
+    }
+}
